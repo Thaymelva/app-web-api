@@ -1,19 +1,39 @@
-import Input from '../../components/Input/Input'
-
-import styles from './NovoLivro.module.css'
+import React, { useState, useEffect } from 'react';
+import Input from '../../components/Input/Input';
+import Select from '../../components/form/Select';
+import styles from './NovoLivro.module.css';
 
 export default function NovoLivro() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/categories', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setCategories(data);
+      console.log(data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }, []);
+
   return (
     <section className={styles.novolivros_container}>
-      <h1>Cadastre livro</h1>
+      <h1>Novo livro</h1>
 
       <form>
         <Input
           type="text"
           name="nome_livro"
           id="nome_livro"
-          placeholder="Digite o titulo do livro"
-          text="Digite o titulo do livro"
+          placeholder="Digite o título do livro"
+          text="Digite o título do livro"
         />
 
         <Input
@@ -28,26 +48,22 @@ export default function NovoLivro() {
           type="text"
           name="descricao_livro"
           id="descricao_livro"
-          placeholder="Digite a descricao do livro"
-          text="digite a descricao do livro"
+          placeholder="Digite a descrição do livro"
+          text="Digite a descrição do livro"
         />
 
-        {/* <p>
-          <input type="text" placeholder="Nome do livro" id="" />
-        </p>
+        <Select
+          name="categoria_id"
+          text="Selecione a categoria do livro"
+          options={categories}
+          handlerOnChange={(e) => console.log(e.target.value)}
+          value=""
+        />
 
         <p>
-          <input type="text" placeholder="Nome do autor" id="" />
+          <input type="submit" value="Cadastrar livro" />
         </p>
-
-        <p>
-          <input type="text" placeholder="Descriçao do livro" id="" />
-        </p>
-
-        <p>
-          <button type="submit">Enviar</button>
-        </p> */}
       </form>
     </section>
-  )
+  );
 }
