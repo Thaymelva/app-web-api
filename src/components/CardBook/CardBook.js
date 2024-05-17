@@ -1,4 +1,5 @@
 import styles from './CardBook.module.css';
+import { link } from 'react-router-dom';
 
 function CardBook({id, livro, autor, categoria, handlerRemove}) {
 
@@ -14,7 +15,13 @@ function CardBook({id, livro, autor, categoria, handlerRemove}) {
             <p className={styles.category_text}>
                 <span></span>{categoria}
             </p>
+
+
             <div className={styles.book_card_actions}>
+                <link to={`/editarLivro/${id}`}>
+                    Editar
+                </link>
+
                 <button onClick={remove}>
                     Excluir
                 </button>
