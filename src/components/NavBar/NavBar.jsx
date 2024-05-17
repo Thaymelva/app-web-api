@@ -9,13 +9,13 @@ export default function NavBar() {
             <Container>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link to='/'>Home</Link>
+                        <Link to='/'>HOME</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/livros'>Livros</Link>
+                        <Link to='/livros'>LIVROS</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/novolivro'>CadastrarLivro</Link>
+                        <Link to='/novolivro'>CADASTRAR LIVROS</Link>
                     </li>
                     <li className={styles.item}>
 

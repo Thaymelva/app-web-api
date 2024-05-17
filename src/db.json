@@ -1,0 +1,50 @@
+{
+  "books": [
+    {
+      "id": "5894",
+      "nome_livro": "As Cavernas de Aço",
+      "nome_autor": "Isaac Azimov",
+      "descricao_livro": "Uma obra da série dos robôs",
+      "category": {
+        "id": "1",
+        "category": "ficçao cientifica"
+      }
+    },
+    {
+      "id": "21b3",
+      "nome_livro": "Os sete maridos de Evelyn Hugo",
+      "nome_autor": "Taylor Jenkins Reid",
+      "descricao_livro": "Da chegada a Hollywood no início da década de 1950 à decisão de abandonar o mundo do espetáculo 30 anos depois, incluindo, claro está, os seus sete casamentos, a vida de Evelyn é repleta de ambição desmedida, amizades improváveis e um grande amor proibido.",
+      "category": {
+        "id": "6",
+        "category": "Romance"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Ficção científica"
+    },
+    {
+      "id": "2",
+      "name": "Back-End"
+    },
+    {
+      "id": "3",
+      "name": "Front-End"
+    },
+    {
+      "id": "4",
+      "name": "Banco de Dados"
+    },
+    {
+      "id": "5",
+      "name": "Computação em cloud"
+    },
+    {
+      "id": "6",
+      "name": "Romance"
+    }
+  ]
+}

@@ -1,17 +1,10 @@
 import style from './Input.module.css'
 
-export default function Input({
-  type,
-  text,
-  name,
-  placeholder,
-  handlerOnChange,
-  value,
-}) 
+function Input({ type, text, name, placeholder, handlerOnChange, value }) 
 
 {
   return (
-    <div className={style.form_control}>
+    <div className={style.input_control}>
       <label htmlFor={name}>{text}</label>
       <input
         type={type}
@@ -24,3 +17,6 @@ export default function Input({
     </div>
   )
 }
+
+
+export default Input;
