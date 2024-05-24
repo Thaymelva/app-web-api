@@ -1,7 +1,7 @@
 import styles from './CardBook.module.css';
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function CardBook({id, livro, autor, categoria, handlerRemove}) {
+function CardBook({id, livro, autor, category, handlerRemove}){
 
     const remove = (event)=>{
         event.preventDefault();
@@ -10,17 +10,20 @@ function CardBook({id, livro, autor, categoria, handlerRemove}) {
 
     return(
         <div className={styles.book_card}>
+
             <h4>{livro}</h4>
-            <p>{autor}</p>
+            
+            <p></p>{autor}
+
             <p className={styles.category_text}>
-                <span></span>{categoria}
+                <span></span> {category}
             </p>
 
+            <div className={styles.card_book_actions}>
 
-            <div className={styles.book_card_actions}>
-                <link to={`/editarLivro/${id}`}>
+                <Link to={`/editarLivro/${id}`}>
                     Editar
-                </link>
+                </Link>
 
                 <button onClick={remove}>
                     Excluir

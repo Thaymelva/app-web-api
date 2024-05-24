@@ -1,52 +1,56 @@
 .book_card{
-    padding: 1em;
-    border: 1px solid #7A7A7A;
-    border-radius: 5px;
     width: 100%;
     margin: 0.5%;
+    padding: 1em;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
 }
 
-.book_card h4{
+.book_card > h4{
     background-color: #222;
-    color: #FFBB33;
+    color: #ffbb33;
     padding: 0.4em;
     margin-bottom: 1.3em;
     font-size: 1.3em;
 }
 
-.book_card p{
-    color: #7A7A7A;
+.book_card > p{
+    color: #7a7a7a;
     margin-bottom: 1em;
 }
 
-.book_card p span{
+.book_card p > span{
     font-weight: bold;
 }
 
 .category_text{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.category_text span{
+.category_text > span{
+    background-color: #ccc;
     display: block;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    background-color: #CCC;
     margin-right: 5px;
+    border-radius: 50%;
 }
 
-/* CSS DE FORMATAÇÃO DOS BOTÕES DE ALTERAR/EXCLUIR */
-.book_card_actions{
+
+
+/* CSS de Formatação dos Botões de Alterar / Excluir */
+
+.card_book_actions{
     margin-top: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.book_card_actions a, 
-.book_card_actions button{
+.card_book_actions a, 
+.card_book_actions button{
     text-decoration: none;
     border: none;
     background-color: #FFF;
@@ -62,8 +66,8 @@
     cursor: pointer;
 }
 
-.book_card_actions a:hover, 
-.book_card_actions button:hover{
+.card_book_actions a:hover, 
+.card_book_actions button:hover{
     background-color: #FF4733;
     color: #FFF;
 }
